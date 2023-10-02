@@ -14,9 +14,11 @@ export default function ProductList(){
                         alt=""  
                         width={100} 
                         height={100}/>
-                    <li>{product.Name}</li>
-                    <li>{product.Größe}</li>
-                    <li>{product.Saison}</li>
+                    <div>
+                     <li>{product.Name}</li>
+                      <li>Größe: {product.Größe}</li>
+                      <li>Saison: {product.Saison}</li>
+                    </div>
                 </div>
             ))}
         </ul>
