@@ -1,11 +1,19 @@
-import ProductList from "../../components/ProductList/ProductList"
+'use client'
+
+import { useRouter } from "next/navigation"
+import Heading from "../../components/Heading/Heading"
 import styles from "./page.module.css"
 
+
 export default function Home() {
+  const router = useRouter()
+
   return (
     <main>
-      <h1 className={styles.heading}>Reifenverwaltung</h1>
-      <ProductList />
+      <Heading />
+      <button className={styles.kundenButton} type="button" onClick={() => router.push('/customer')}>
+        Kundenbereich
+      </button>
     </main>
   )
 }
