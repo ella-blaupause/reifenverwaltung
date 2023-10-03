@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "mongodb": "^6.1.0",
+    "mongoose": "^7.5.3",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "styled-components": "^6.0.8"
+    "styled-components": "^6.0.8",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "eslint": "latest",
