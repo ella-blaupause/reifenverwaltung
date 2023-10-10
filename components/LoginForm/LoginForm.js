@@ -1,9 +1,9 @@
 "use client";
 
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { signIn } from "next-auth/react";
 
 
 export default function LoginForm() {
@@ -16,23 +16,22 @@ export default function LoginForm() {
   async function handleSubmit(event){ 
     event.preventDefault(); 
 
-    try {
+    try{
       const response = await signIn("credentials", {
         username,
         password,
         redirect: false,
       });
 
-      if (response.error) {
+      if(response.error){
         setError("Invalid Credentials");
         return;
       }
 
-      router.replace("dashboard");
-    } catch (error) {
+      router.replace("dashboard");      
+    }catch(error){
       console.log(error);
     }
-
   }
   
   return (
@@ -64,7 +63,7 @@ export default function LoginForm() {
           )}
 
           <Link href={"/register"}>
-            Don't have an account? <span>Register</span>
+            Dont have an account? <span>Register</span>
           </Link>
         </form>
       </div>
