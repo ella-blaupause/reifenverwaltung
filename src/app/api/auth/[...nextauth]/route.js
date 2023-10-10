@@ -1,5 +1,8 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
+import dbConnect from "../../../../../db/connect";
+import User from "../../../../../db/models/User";
+import bcrypt from "bcryptjs";
 
 export const authOptions = {
   providers: [
@@ -8,8 +11,26 @@ export const authOptions = {
       credentials: {},
 
       async authorize(credentials) {
-        const user = {id: "1"};
-        return user;
+        const {username, password} = credentials;
+
+        try{
+          await dbConnect();
+          const user = await User.findOne({ username });
+
+          if(!user){
+            return null;
+          }
+
+          const passwordsMatch = await bcrypt.compare(password, user.password);
+
+          if (!passwordsMatch) {
+            return null;
+          }
+          console.log(user)
+          return user;
+        }catch(error){
+          console.log("Error: ", error);
+        }
       }
     }),
   ],
@@ -18,7 +39,7 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/",
+    signIn: "/login",
   },
 };
 
