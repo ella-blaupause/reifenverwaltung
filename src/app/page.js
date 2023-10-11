@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <Heading />
-      <button className={styles.kundenButton} type="button" onClick={() => router.push('/customer')}>
-        Kundenbereich
+      <button className={styles.kundenButton} type="button" onClick={() => router.push('/login')}>
+        Login
       </button>
     </main>
   )
