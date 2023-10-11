@@ -43,7 +43,7 @@ export default function LoginForm() {
           <input
             onChange={(event) => setUsername(event.target.value)}
             type="text"
-            placeholder="Username"
+            placeholder="Benutzername"
           />
           <br/>
           <input
