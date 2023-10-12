@@ -26,6 +26,8 @@ export default function Dashboard() {
     <main>
       <Heading />
       <UserInfo />
+      {session.user.role === "admin" &&
+       <Link href={"/admin"}>Du bist Admin</Link>}
       <ProductList />
     </main>
   )

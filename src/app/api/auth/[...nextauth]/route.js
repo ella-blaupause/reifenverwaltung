@@ -41,6 +41,7 @@ export const authOptions = {
             token.user = {
                 _id: user._id,
                 username: user.username,
+                role: user.role,
             }
         }
         return token
