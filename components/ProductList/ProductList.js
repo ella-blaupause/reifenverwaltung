@@ -23,7 +23,9 @@ export default function ProductList(){
                     <Image src={product.Bild} 
                         alt=""  
                         width={100} 
-                        height={100}/>
+                        height={100}
+                        priority/>
+                    
                     <div>
                      <li>{product.Name}</li>
                       <li>Größe: {product.Größe}</li>
