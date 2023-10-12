@@ -22,7 +22,8 @@ export default function AddTopic() {
       });
 
       if (response.ok) {
-        event.target.reset();
+        router.refresh();
+        router.push("/");
       } else {
         throw new Error("Failed to create a topic");
       }

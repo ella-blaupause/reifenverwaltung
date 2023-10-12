@@ -1,12 +1,11 @@
-//import { products } from "../../data/products";
 "use client";
 
 import useSWR from "swr";
 import styles from "./ProductListAdmin.module.css"
 import Image from 'next/image'
-import { products } from "../../data/products";
 import { FiEdit } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
+import Link from "next/link";
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -34,8 +33,10 @@ export default function ProductListAdmin(){
                       <li>{product.Name}</li>
                       <li>Größe: {product.Größe}</li>
                       <li>Saison: {product.Saison}</li>
-                      <li><FiEdit /></li>
-                      <li><FiTrash2 /></li>
+                      <div>
+                        <Link href={`/editProduct/${product._id}`}><FiEdit /></Link>
+                        <FiTrash2 />
+                      </div>
                     </div>
                 </div>
             ))}
