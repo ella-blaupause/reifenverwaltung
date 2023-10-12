@@ -2,13 +2,17 @@
 "use client";
 
 import useSWR from "swr";
-import styles from "./ProductList.module.css"
+import styles from "./ProductListAdmin.module.css"
 import Image from 'next/image'
+import { products } from "../../data/products";
+import { FiEdit } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
+
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
    
 
-export default function ProductList(){
+export default function ProductListAdmin(){
     const { data, error, isLoading } = useSWR('/api/products', fetcher)
   
     if (error) return <div>failed to load</div>
@@ -27,9 +31,11 @@ export default function ProductList(){
                         priority/>
                     
                     <div>
-                     <li>{product.Name}</li>
+                      <li>{product.Name}</li>
                       <li>Größe: {product.Größe}</li>
                       <li>Saison: {product.Saison}</li>
+                      <li><FiEdit /></li>
+                      <li><FiTrash2 /></li>
                     </div>
                 </div>
             ))}

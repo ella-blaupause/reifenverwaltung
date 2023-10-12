@@ -1,0 +1,11 @@
+.list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.productCard{
+    padding: 5px 0 5px 0;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    
+}
