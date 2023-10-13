@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditProductForm({ Name, Bild, Größe, Saison }) {
+export default function EditProductForm({id, Name, Bild, Größe, Saison }) {
   const [newName, setNewName] = useState(Name);
   const [newBild, setNewBild] = useState(Bild);
   const [newGröße, setNewGröße] = useState(Größe);
@@ -28,7 +28,7 @@ export default function EditProductForm({ Name, Bild, Größe, Saison }) {
       }
 
       router.refresh();
-      router.push("/");
+      router.push("/admin");
     } catch (error) {
       console.log(error);
     }
