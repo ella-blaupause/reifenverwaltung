@@ -25,7 +25,7 @@ export default function AddTopic() {
         router.refresh();
         router.push("/");
       } else {
-        throw new Error("Failed to create a topic");
+        throw new Error("Failed to create a product");
       }
     } catch (error) {
       console.log(error);

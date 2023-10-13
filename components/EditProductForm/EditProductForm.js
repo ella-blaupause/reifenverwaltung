@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditTopicForm({ Name, Bild, Größe, Saison }) {
+export default function EditProductForm({ Name, Bild, Größe, Saison }) {
   const [newName, setNewName] = useState(Name);
   const [newBild, setNewBild] = useState(Bild);
   const [newGröße, setNewGröße] = useState(Größe);
@@ -63,9 +63,9 @@ export default function EditTopicForm({ Name, Bild, Größe, Saison }) {
         type="text"
         placeholder="Saison"
       />
-
+      <br />
       <button>
-        Product aktualisieren
+        Produkt aktualisieren
       </button>
     </form>
   );

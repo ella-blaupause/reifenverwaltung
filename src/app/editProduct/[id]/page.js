@@ -1,27 +1,28 @@
-
+"use client"
 import EditProductForm from "../../../../components/EditProductForm/EditProductForm";
+import Heading from "../../../../components/Heading/Heading";
 
-async function getProductById(id) {
-    
-    try {
-        const res = await fetch(`/api/products/${id}`, {
-          cache: "no-store",
-        });
-    
-        if (!res.ok) {
-          throw new Error("Failed to fetch topic");
-        }
-        console.log(res.json())
-        return res.json();
-      } catch (error) {
-        console.log(error);
-      }
-};
+async function getProduct(id) {
+  const res = await fetch(`/api/products/${id}`,  {
+    cache: "no-store",
+  });
+ 
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
 
-export default async function EditProduct({ params }) {
+export default function EditProduct({ params }) {
   const { id } = params;
-  const  product  = await getProductById(id);
-  console.log("Product: " + product)
-
-  return <EditProductForm id={id}  />;
+  
+  const product = getProduct(id)
+  const {Name, Bild, Größe, Saison}=product;
+  return (
+    <>
+        <Heading />
+       <EditProductForm id={id} Name={Name} Bild={Bild} Größe={Größe} Saison={Saison} />;
+    </>
+  )
 }

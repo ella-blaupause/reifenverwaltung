@@ -10,9 +10,9 @@ export async function PUT(request, { params }) {
   return NextResponse.json({ message: "Product updated" }, { status: 200 });
 }
 
-export async function GET({ params }) {
+export async function GET(request, { params }) {
   const { id } = params;
   await dbConnect();
-  const product = await Product.findOne({ _id: id });
+  const product = await Product.findOne( {_id: id} );
   return NextResponse.json({ product }, { status: 200 });
 }

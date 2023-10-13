@@ -17,7 +17,6 @@ export default function ProductListAdmin(){
     if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
 
-    console.log(data.products);
     const products= data.products;
     return(
         <ul className={styles.list}>
