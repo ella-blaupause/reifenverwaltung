@@ -19,7 +19,7 @@ export default function ProductList(){
     return(
         <ul className={styles.list}>
             {products.map((product)=>(
-                <div key={product.id} className={styles.productCard}>
+                <div key={product._id} className={styles.productCard}>
                     <Image src={product.Bild} 
                         alt=""  
                         width={100} 

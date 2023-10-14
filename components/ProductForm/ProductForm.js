@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
@@ -8,6 +9,8 @@ export default function AddTopic() {
   const [Bild, setBild] = useState("");
   const [Größe, setGröße] = useState("");
   const [Saison, setSaison] = useState("");
+
+  const router = useRouter();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,9 +25,10 @@ export default function AddTopic() {
       });
 
       if (response.ok) {
-        event.target.reset();
+        router.refresh();
+        router.push("/admin");
       } else {
-        throw new Error("Failed to create a topic");
+        throw new Error("Failed to create a product");
       }
     } catch (error) {
       console.log(error);
@@ -32,7 +36,7 @@ export default function AddTopic() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form onSubmit={handleSubmit}>
       <input
         onChange={(event) => setName(event.target.value)}
         value={Name}
