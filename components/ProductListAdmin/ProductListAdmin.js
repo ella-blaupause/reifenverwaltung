@@ -4,8 +4,8 @@ import useSWR from "swr";
 import styles from "./ProductListAdmin.module.css"
 import Image from 'next/image'
 import { FiEdit } from "react-icons/fi";
-import { FiTrash2 } from "react-icons/fi";
 import Link from "next/link";
+import DeleteButton from "../DeleteButton/DeleteButton";
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -34,7 +34,7 @@ export default function ProductListAdmin(){
                       <li>Saison: {product.Saison}</li>
                       <div>
                         <Link href={`/editProduct/${product._id}`}><FiEdit /></Link>
-                        <FiTrash2 />
+                        <DeleteButton id={product._id}/>
                       </div>
                     </div>
                 </div>
