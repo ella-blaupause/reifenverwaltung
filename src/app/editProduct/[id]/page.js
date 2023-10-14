@@ -1,11 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react";
 import EditProductForm from "../../../../components/EditProductForm/EditProductForm";
 import Heading from "../../../../components/Heading/Heading";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { BiUndo } from "react-icons/bi";
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 
@@ -46,7 +46,8 @@ export default function EditProduct({ params }) {
   return (
     <>
       <Heading />
-       <EditProductForm id={id} Name={Name} Bild={Bild} Größe={Größe} Saison={Saison}  />
+      <Link href={"/admin"}><BiUndo size={24} /></Link>
+      <EditProductForm id={id} Name={Name} Bild={Bild} Größe={Größe} Saison={Saison}  />
     </>
   )
 }

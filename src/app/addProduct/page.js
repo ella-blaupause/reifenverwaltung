@@ -6,7 +6,8 @@ import { BiUndo } from "react-icons/bi";
 import ProductForm from "../../../components/ProductForm/ProductForm";
 import { useSession } from "next-auth/react";
 
-export default function addProduct(){
+
+export default function AddProduct(){
     const { data: session } = useSession(); 
 
     if(!session) {
@@ -27,6 +28,8 @@ export default function addProduct(){
             </>
         )
     } 
+    
+
     return(
         <>
             <Heading />

@@ -5,7 +5,7 @@ import Heading from "../../../components/Heading/Heading"
 import LoginForm from "../../../components/LoginForm/LoginForm"
 
 
-export default function Home() {
+export default function Login() {
   const router = useRouter()
 
   return (
