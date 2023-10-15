@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { FaUser } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
+import styles from "./LoginForm.module.css"
+
 
 
 export default function LoginForm() {
@@ -24,7 +28,7 @@ export default function LoginForm() {
       });
 
       if(response.error){
-        setError("Invalid Credentials");
+        setError("Ungültige Anmeldedaten");
         return;
       }
 
@@ -35,38 +39,42 @@ export default function LoginForm() {
   }
   
   return (
-    <div>
-      <div >
-        <h2>Login</h2>
+    <div className={styles.loginDiv}>
+        <h2 className={styles.loginHeader}>Login</h2>
 
-        <form onSubmit={handleSubmit}>
-          <input
+        <form onSubmit={handleSubmit} className={styles.loginForm}>
+          <div className={styles.inputDiv}>
+            <FaUser className={styles.icon} />
+            <input
             onChange={(event) => setUsername(event.target.value)}
             type="text"
             placeholder="Benutzername"
-          />
-          <br/>
-          <input
-            onChange={(event) => setPassword(event.target.value)}
-            type="password"
-            placeholder="Password"
-          />
-          <br />
-          <button>
+            />
+          </div>
+
+          <div className={styles.inputDiv}>
+            <FaLock className={styles.icon} />
+            <input
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+        
+          <button className={styles.loginButton}>
             Login
           </button>
-          <br />
+         
           {error && (
-            <div>
+            <div className={styles.errorDiv}>
               {error}
             </div>
           )}
 
-          <Link href={"/register"}>
-            Dont have an account? <span>Register</span>
+          <Link href={"/register"} className={styles.formLink}>
+            Neues Konto erstellen
           </Link>
         </form>
-      </div>
     </div>
   );
 }

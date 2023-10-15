@@ -90,7 +90,7 @@ export default function RegisterForm() {
           )}
 
           <Link href={"/login"}>
-            Already have an account? <span>Login</span>
+            Zum Login
           </Link>
         </form>
       </div>

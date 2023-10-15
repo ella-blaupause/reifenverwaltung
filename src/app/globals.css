@@ -11,3 +11,8 @@ body {
   align-items: center;
 }
 
+:root{
+  --adesso-blue: #006EC7;
+  --adesso-gray: #887D75;
+  --adesso-orange: #C8B600;
+}
