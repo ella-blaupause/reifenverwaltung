@@ -5,6 +5,7 @@
     border-color: black;
    
 }
+
 .kundenButton:hover {
     transform: scale(1.1);
-   }
+}

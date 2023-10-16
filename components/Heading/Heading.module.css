@@ -1,3 +1,7 @@
 .heading {
-    color: var(--adesso-blue);
+    color: white;
+    background-color: var(--adesso-blue);
+    font-size: 58px;
+    margin: 16px;
+    padding: 8px;
 }

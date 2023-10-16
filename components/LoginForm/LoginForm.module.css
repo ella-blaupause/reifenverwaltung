@@ -8,12 +8,19 @@
     top: 0;
     bottom: 0;
     margin: auto;
+  
 }
 
 .loginHeader{
-    color: var(--adesso-blue);
-    text-align: center;
+    color: white;
+    background-color: var(--adesso-gray);
     font-size: 36px;
+    width: fit-content;
+    padding: 4px 8px 4px 8px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .loginForm{
@@ -44,11 +51,16 @@
 
 .loginButton{
     background-color: var(--adesso-orange);
+    color: white;
     border: none;
-    font-size: 28px;
+    font-size: 18px;
     width: fit-content;
-    border-radius: 10px;
-    padding: 8px;
+    padding: 8px 16px 8px 16px;
+    clip-path: polygon(0 0, 130% 0, 0 300%, 0 0);
+}
+
+.loginButton:hover{
+    background-color: #DCC800;
 }
 
 .formLink{
@@ -60,7 +72,12 @@
     font-size: 18px;
 }
 
+.formLink:hover{
+    color: var(--adesso-blue);
+}
+
 .errorDiv{
+    color: white;
     background-color: red;
     font-size: 18px;
     margin: 20px;

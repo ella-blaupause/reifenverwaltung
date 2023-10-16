@@ -44,7 +44,7 @@ export default function LoginForm() {
 
         <form onSubmit={handleSubmit} className={styles.loginForm}>
           <div className={styles.inputDiv}>
-            <FaUser className={styles.icon} />
+            <FaUser size={18} className={styles.icon} />
             <input
             onChange={(event) => setUsername(event.target.value)}
             type="text"
@@ -53,16 +53,16 @@ export default function LoginForm() {
           </div>
 
           <div className={styles.inputDiv}>
-            <FaLock className={styles.icon} />
+            <FaLock size={18} className={styles.icon} />
             <input
               onChange={(event) => setPassword(event.target.value)}
               type="password"
-              placeholder="Password"
+              placeholder="Passwort"
             />
           </div>
         
           <button className={styles.loginButton}>
-            Login
+            Anmelden
           </button>
          
           {error && (
