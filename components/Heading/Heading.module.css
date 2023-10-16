@@ -5,3 +5,10 @@
     margin: 16px;
     padding: 8px;
 }
+
+@media (max-width: 600px){
+    .heading{
+        font-size: 36px;
+    }
+    
+}

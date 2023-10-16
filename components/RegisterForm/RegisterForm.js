@@ -99,7 +99,7 @@ export default function RegisterForm() {
           )}
 
           <Link href={"/login"} className={styles.formLink}>
-            <FiLogIn size={24}/>
+            <FiLogIn size={16} /> Zum Login
           </Link>
         </form>
     </div>
