@@ -2,7 +2,8 @@
 
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { FiLogOut } from "react-icons/fi";
+
 
 
 export default function UserInfo() {
@@ -16,7 +17,7 @@ export default function UserInfo() {
           </div>
          
           <button onClick={() => signOut()}>
-            Log Out
+            <FiLogOut />
           </button>
         </div>
       </div>
