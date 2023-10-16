@@ -6,6 +6,7 @@ import ProductList from "../../../components/ProductList/ProductList"
 import UserInfo from "../../../components/UserInfo/UserInfo"
 import { useSession } from "next-auth/react";
 import { GrUserAdmin } from "react-icons/gr";
+import { FiLogIn } from "react-icons/fi";
 
 
 export default function Dashboard() {
@@ -17,7 +18,7 @@ export default function Dashboard() {
       <>
         <Heading />
         <Link href={"/login"}>
-            Bitte einlogen <span>Login</span>
+            Bitte einlogen <span><FiLogIn /></span>
         </Link>
       </>
     )
