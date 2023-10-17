@@ -9,3 +9,7 @@
 .kundenButton:hover {
     transform: scale(1.1);
 }
+
+.textContent{
+    width: 400px;
+}
