@@ -32,7 +32,7 @@ export default function Admin(){
     return (
     <>
         <Heading />
-        <Link href={"/addProduct"}><FiPlusCircle /></Link>
+        <Link href={"/addProduct"}><FiPlusCircle size={18}/> Reifen hinzufügen</Link>
         <ProductListAdmin />
         <Link href={"/dashboard"}>Zurück zum Kundenbereich</Link>
     </>)
