@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import styles from "./ProductForm.module.css"
 
 export default function AddTopic() {
   const [Name, setName] = useState("");
@@ -36,36 +36,37 @@ export default function AddTopic() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.productForm}>
       <input
         onChange={(event) => setName(event.target.value)}
         value={Name}
         type="text"
         placeholder="Name"
       />
-      <br />
+
       <input
         onChange={(event) => setBild(event.target.value)}
         value={Bild}
         type="text"
         placeholder="Bild-URL"
       />
-      <br />
+    
       <input
         onChange={(event) => setGröße(event.target.value)}
         value={Größe}
         type="text"
         placeholder="Größe"
       />
-      <br />
+      
       <input
         onChange={(event) => setSaison(event.target.value)}
         value={Saison}
         type="text"
         placeholder="Saison"
       />
-      <br />
+      
       <button
+        className={styles.addButton}
         type="submit"
       >
         Einfügen

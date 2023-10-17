@@ -5,6 +5,7 @@ import Heading from "../../../components/Heading/Heading"
 import { BiUndo } from "react-icons/bi";
 import ProductForm from "../../../components/ProductForm/ProductForm";
 import { useSession } from "next-auth/react";
+import styles from "./addProduct.module.css"
 
 
 export default function AddProduct(){
@@ -33,7 +34,7 @@ export default function AddProduct(){
     return(
         <>
             <Heading />
-            <Link href={"/admin"}><BiUndo size={24} /></Link>
+            <Link href={"/admin"}><BiUndo size={36} /></Link>
             <ProductForm />
         </>
     )

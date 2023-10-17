@@ -35,7 +35,7 @@ export default function ProductListAdmin(){
                     </div>
 
                     <div className={styles.editAndDelete}>
-                      <Link href={`/editProduct/${product._id}`}><FiEdit size={24}/></Link>
+                      <Link href={`/editProduct/${product._id}`} className={styles.editLink}><FiEdit size={24}/></Link>
                       <DeleteButton id={product._id}/>
                     </div>
                 

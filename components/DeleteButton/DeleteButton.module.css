@@ -4,3 +4,7 @@
     border: none;
     cursor: pointer;
 }
+
+.deleteButton:hover{
+    transform: scale(1.1);
+}
