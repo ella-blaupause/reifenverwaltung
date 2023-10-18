@@ -1,12 +1,13 @@
 'use client'
 
-import { useRouter } from "next/navigation"
 import Heading from "../../components/Heading/Heading"
 import styles from "./page.module.css"
+import Link from "next/link"
+import { FiLogIn } from "react-icons/fi";
+
 
 
 export default function Home() {
-  const router = useRouter()
 
   return (
     <main>
@@ -25,9 +26,10 @@ export default function Home() {
         besten Reifenlösungen anzubieten, um deine Fahrten sicherer und komfortabler 
         zu gestalten.</p>
       <p>Deinem zuverlässigen Partner für erstklassige Reifen!</p>
-      <button className={styles.kundenButton} type="button" onClick={() => router.push('/login')}>
-        Login
-      </button>
+
+      <Link href={"/login"} className={styles.loginLink}>
+            <FiLogIn size={16} /> Zum Login
+        </Link>
     </main>
   )
 }

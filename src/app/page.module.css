@@ -1,14 +1,18 @@
-.kundenButton{
-    font-size: 24px;
-    border-radius: 6px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-color: black;
-   
+.loginLink{
+    background-color: var(--adesso-blue);
+    color: white;
+    margin: 24px 0 64px 0;
+    font-size: 18px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+    clip-path: polygon(0 0, 130% 0, 0 300%, 0 0);
+    text-decoration: none;
 }
 
-.kundenButton:hover {
-    transform: scale(1.1);
+.loginLink:hover {
+    background-color: darkblue;
 }
+
 
 .textContent{
     width: 400px;
