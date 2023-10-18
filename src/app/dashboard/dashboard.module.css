@@ -4,15 +4,12 @@
 }
 
 .adminLink{
-    color: blue;
+    color: var(--adesso-orange);
     font-size: 32px;
     margin: 0 16px 0 16px;
 }
 
 .adminLink:hover{
-    color: var(--adesso-blue)
+    color: var(--adesso-blue);
 }
 
-.textContent{
-    color: red;
-}

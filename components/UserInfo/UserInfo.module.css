@@ -1,0 +1,17 @@
+.halloDiv{
+    font-size: 32px;
+}
+
+.logoutButton{
+    background-color: var(--adesso-orange);
+    color: white;
+    border: none;
+    font-size: 14px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+    clip-path: polygon(0 0, 130% 0, 0 300%, 0 0);
+}
+
+.logoutButton:hover{
+    background-color: #DCC800;
+}
