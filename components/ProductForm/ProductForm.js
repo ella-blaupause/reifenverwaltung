@@ -64,7 +64,6 @@ export default function AddTopic() {
         <option value={"Sommer"}>Sommer</option>
         <option value={"Winter"}>Winter</option>
         <option value={"Ganzjahr"}>Ganzjahr</option>
-
       </select>
 
       <button
