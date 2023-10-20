@@ -26,7 +26,7 @@ export default function Dashboard() {
       </>
     )
   }
-  console.log(saison)
+  
  
   return (
     <main>
@@ -34,18 +34,19 @@ export default function Dashboard() {
       <div className={styles.userAdminDiv}>
       <UserInfo />
       {session.user.role === "admin" &&
-       <Link href={"/admin"} className={styles.adminLink}> <FaUserCog /></Link>}
+       <Link href={"/admin"} className={styles.adminLink}> <FaUserCog /></Link>
+      }
       </div>
   
       <>
-       <button type="button" onClick={()=> setSaison("Sommer")}>Sommer</button>
-       <button type="button" onClick={()=> setSaison("Winter")}>Winter</button> 
-       <button type="button" onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
-       <button type="button" onClick={()=> setSaison("alle")}>Alle</button>
+       <div className={styles.saisonButtons}>
+        <button type="button" className={saison === "Sommer" && styles.active} onClick={()=> setSaison("Sommer")}>Sommer</button>
+        <button type="button" className={saison === "Winter" && styles.active} onClick={()=> setSaison("Winter")}>Winter</button> 
+        <button type="button" className={saison === "Ganzjahr" && styles.active} onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
+        <button type="button" className={saison === "alle" && styles.active} onClick={()=> setSaison("alle")}>Alle</button>
+       </div>
        <ProductList saison={saison} />
       </>
-
-      
     </main>
   )
 }
