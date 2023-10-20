@@ -8,7 +8,7 @@ import Image from 'next/image'
 const fetcher = (...args) => fetch(...args).then(res => res.json());
    
 
-export default function ProductList(){
+export default function ProductList({saison}){
     const { data, error, isLoading } = useSWR('/api/products', fetcher)
   
     if (error) return <div>failed to load</div>
@@ -16,9 +16,15 @@ export default function ProductList(){
 
     console.log(data.products);
     const products= data.products;
+    let filtredProdcts;
+    if(saison === "alle"){
+        filtredProdcts = products;
+    }else{
+        filtredProdcts = products.filter((product) => product.Saison === saison )
+    }
     return(
         <ul className={styles.list}>
-            {products.map((product)=>(
+            {filtredProdcts.map((product)=>(
                 <div key={product._id} className={styles.productCard}>
                     <Image src={product.Bild} 
                         alt=""  

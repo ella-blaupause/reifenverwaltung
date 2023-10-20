@@ -13,3 +13,25 @@
     color: darkblue;
 }
 
+.saisonButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px;
+}
+
+.saisonButtons button{
+    color: var(--adesso-orange);
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.saisonButtons button:hover{
+    color: var(--adesso-blue);
+}
+
+.saisonButtons button.active{
+    color: var(--adesso-blue);
+}
