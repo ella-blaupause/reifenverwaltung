@@ -8,10 +8,12 @@ import { useSession } from "next-auth/react";
 import { FaUserCog } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import styles from "./dashboard.module.css"
+import { useState } from "react";
 
 
 export default function Dashboard() {
   const { data: session } = useSession(); 
+  const [saison, setSaison]= useState("")
   
 
   if(!session) {
@@ -24,7 +26,8 @@ export default function Dashboard() {
       </>
     )
   }
-  
+  console.log(saison)
+ 
   return (
     <main>
       <Heading />
@@ -33,7 +36,15 @@ export default function Dashboard() {
       {session.user.role === "admin" &&
        <Link href={"/admin"} className={styles.adminLink}> <FaUserCog /></Link>}
       </div>
-      <ProductList />
+      {!saison ? 
+       <>
+        <button type="button" onClick={()=> setSaison("sommer")}>Sommer</button>
+        <button type="button" onClick={()=> setSaison("winter")}>Winter</button> 
+        <button type="button" onClick={()=> setSaison("ganzjahr")}>Ganzjahr</button>
+       </>: 
+        <ProductList />
+      }
+      
     </main>
   )
 }
