@@ -1,3 +1,15 @@
-.heading {
+.userAdminDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminLink{
+    color: var(--adesso-blue);
+    font-size: 32px;
+    margin: 0 16px 0 16px;
+}
+
+.adminLink:hover{
     color: darkblue;
 }
+

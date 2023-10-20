@@ -1,0 +1,85 @@
+.loginDiv{
+    height: 400px;
+    width: 300px;
+    box-shadow: 10px 10px 30px gray;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  
+}
+
+.loginHeader{
+    color: white;
+    background-color: var(--adesso-gray);
+    font-size: 36px;
+    width: fit-content;
+    padding: 4px 8px 4px 8px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.inputDiv{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inputDiv input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid var(--adesso-blue);
+    outline: none;
+    font-size: 18px;
+}
+
+.icon{
+    color: var(--adesso-blue);
+}
+
+.loginButton{
+    background-color: var(--adesso-orange);
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+    clip-path: polygon(0 0, 130% 0, 0 300%, 0 0);
+}
+
+.loginButton:hover{
+    background-color: #DCC800;
+}
+
+.formLink{
+    color: var(--adesso-orange);
+    position:absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.formLink:hover{
+    color: var(--adesso-blue);
+}
+
+.errorDiv{
+    color: white;
+    background-color: darkred;
+    font-size: 18px;
+    margin: 20px;
+    padding: 4px;
+}

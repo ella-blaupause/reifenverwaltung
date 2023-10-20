@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "./RegisterForm.module.css"
+import { FaUser } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
+import { FiLogIn } from "react-icons/fi";
 
 export default function RegisterForm() {
   const [username, setUsername] = useState("");
@@ -61,39 +65,43 @@ export default function RegisterForm() {
   
   
   return (
-    <div>
-      <div>
-        <h2>Register</h2>
+    <div className={styles.registerDiv}>
+        <h2 className={styles.registerHeader}>Register</h2>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            onChange={(event) => setUsername(event.target.value)}
-            type="text"
-            placeholder="Benutzername"
-          />
-          <br />
-          <input
-            onChange={(event) => setPassword(event.target.value)}
-            type="password"
-            placeholder="Password"
-          />
-          <br />
-          <button>
-            Register
+        <form onSubmit={handleSubmit} className={styles.registerForm}>
+          <div className={styles.inputDiv}>
+            <FaUser size={18} className={styles.icon} />
+            <input
+              onChange={(event) => setUsername(event.target.value)}
+              type="text"
+              placeholder="Benutzername"
+            />
+          </div>
+
+          <div className={styles.inputDiv}>
+            <FaLock size={18} className={styles.icon} />
+            <input
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Passwort"
+           />
+          </div>
+
+          <button className={styles.regisgerButton}>
+             Registrieren
           </button>
-          <br />
+        
 
           {error && (
-            <div>
+            <div className={styles.errorDiv}>
               {error}
             </div>
           )}
 
-          <Link href={"/login"}>
-            Already have an account? <span>Login</span>
+          <Link href={"/login"} className={styles.formLink}>
+            <FiLogIn size={16} /> Zum Login
           </Link>
         </form>
-      </div>
     </div>
   );
 }

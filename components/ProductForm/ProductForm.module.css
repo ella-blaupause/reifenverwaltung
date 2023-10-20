@@ -1,0 +1,24 @@
+.productForm{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.productForm input{
+    padding: 4px 8px 4px 8px;
+}
+
+.addButton{
+    background-color: var(--adesso-orange);
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: fit-content;
+    padding: 8px 16px 8px 16px;
+    clip-path: polygon(0 0, 130% 0, 0 300%, 0 0); 
+}
+
+.addButton:hover{
+    background-color: #DCC800;
+
+}

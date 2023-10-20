@@ -5,7 +5,36 @@
 
 .productCard{
     padding: 5px 0 5px 0;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    border:1px solid var(--adesso-blue);
+    margin: 8px 0 8px 0;
+}
+
+.productName{
+    background-color: var(--adesso-gray);
+    color: white;
+    width: max-content;
+}
+
+.productDescrption{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;;
+    flex-wrap: wrap;
+}
+
+.editAndDelete{
+    display: flex;
+    gap: 8px;
+}
+
+.editLink{
+    color: var(--adesso-orange);
+}
+
+.editLink:hover{
+    color: var(--adesso-blue);
 }

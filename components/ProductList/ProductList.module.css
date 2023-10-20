@@ -9,3 +9,9 @@
     grid-template-columns: 35% 65%;
     
 }
+
+.productName{
+    background-color: var(--adesso-gray);
+    color: white;
+    width: max-content;
+}

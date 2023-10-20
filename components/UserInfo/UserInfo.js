@@ -2,7 +2,9 @@
 
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { FiLogOut } from "react-icons/fi";
+import styles from "./UserInfo.module.css"
+
 
 
 export default function UserInfo() {
@@ -10,15 +12,13 @@ export default function UserInfo() {
   
     return (
       <div>
-        <div>
-          <div>
-            Hallo <span>{session?.user?.username}</span>
-          </div>
-         
-          <button onClick={() => signOut()}>
-            Log Out
-          </button>
+        <div className={styles.halloDiv}>
+          Hallo {session?.user?.username}
         </div>
+         
+        <button onClick={() => signOut()} className={styles.logoutButton}>
+          <FiLogOut /> Ausloggen
+        </button>
       </div>
     );
   }

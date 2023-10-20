@@ -22,12 +22,12 @@ export default function ProductList(){
                 <div key={product._id} className={styles.productCard}>
                     <Image src={product.Bild} 
                         alt=""  
-                        width={100} 
-                        height={100}
+                        width={120} 
+                        height={120}
                         priority/>
                     
                     <div>
-                     <li>{product.Name}</li>
+                     <li><h2 className={styles.productName}>{product.Name}</h2></li>
                       <li>Größe: {product.Größe}</li>
                       <li>Saison: {product.Saison}</li>
                     </div>

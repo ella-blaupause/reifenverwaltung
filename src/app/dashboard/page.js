@@ -5,6 +5,9 @@ import Heading from "../../../components/Heading/Heading"
 import ProductList from "../../../components/ProductList/ProductList" 
 import UserInfo from "../../../components/UserInfo/UserInfo"
 import { useSession } from "next-auth/react";
+import { FaUserCog } from "react-icons/fa";
+import { FiLogIn } from "react-icons/fi";
+import styles from "./dashboard.module.css"
 
 
 export default function Dashboard() {
@@ -16,7 +19,7 @@ export default function Dashboard() {
       <>
         <Heading />
         <Link href={"/login"}>
-            Bitte einlogen <span>Login</span>
+            Bitte einlogen <span><FiLogIn /></span>
         </Link>
       </>
     )
@@ -25,9 +28,11 @@ export default function Dashboard() {
   return (
     <main>
       <Heading />
+      <div className={styles.userAdminDiv}>
       <UserInfo />
       {session.user.role === "admin" &&
-       <Link href={"/admin"}>Du bist Admin</Link>}
+       <Link href={"/admin"} className={styles.adminLink}> <FaUserCog /></Link>}
+      </div>
       <ProductList />
     </main>
   )

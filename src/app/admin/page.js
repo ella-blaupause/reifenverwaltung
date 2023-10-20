@@ -6,6 +6,7 @@ import Heading from "../../../components/Heading/Heading";
 import { FiPlusCircle } from "react-icons/fi";
 import ProductListAdmin from "../../../components/ProductListAdmin/ProductListAdmin";
 import { useSession } from "next-auth/react";
+import styles from "./admin.module.css"
 
 export default function Admin(){
     const { data: session } = useSession(); 
@@ -32,8 +33,8 @@ export default function Admin(){
     return (
     <>
         <Heading />
-        <Link href={"/addProduct"}><FiPlusCircle /></Link>
+        <Link href={"/addProduct"} className={styles.addProductLink}><span> Reifen hinzufügen </span><FiPlusCircle /></Link>
         <ProductListAdmin />
-        <Link href={"/dashboard"}>Zurück zum Kundenbereich</Link>
+        <Link href={"/dashboard"} className={styles.backLink}>Zurück zum Kundenbereich</Link>
     </>)
 }
