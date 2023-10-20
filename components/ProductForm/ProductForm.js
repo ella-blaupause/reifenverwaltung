@@ -14,6 +14,7 @@ export default function AddTopic() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(event.target[3].value)
 
     try {
       const response = await fetch("/api/products", {
@@ -58,13 +59,14 @@ export default function AddTopic() {
         placeholder="Größe"
       />
       
-      <input
-        onChange={(event) => setSaison(event.target.value)}
-        value={Saison}
-        type="text"
-        placeholder="Saison"
-      />
-      
+      <select onChange={(event) => setSaison(event.target.value)}>
+        <option value={""}>--Saison--</option>
+        <option value={"Sommer"}>Sommer</option>
+        <option value={"Winter"}>Winter</option>
+        <option value={"Ganzjahr"}>Ganzjahr</option>
+
+      </select>
+
       <button
         className={styles.addButton}
         type="submit"
