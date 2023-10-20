@@ -38,11 +38,17 @@ export default function Dashboard() {
       </div>
       {!saison ? 
        <>
-        <button type="button" onClick={()=> setSaison("sommer")}>Sommer</button>
-        <button type="button" onClick={()=> setSaison("winter")}>Winter</button> 
-        <button type="button" onClick={()=> setSaison("ganzjahr")}>Ganzjahr</button>
+        <button type="button" onClick={()=> setSaison("Sommer")}>Sommer</button>
+        <button type="button" onClick={()=> setSaison("Winter")}>Winter</button> 
+        <button type="button" onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
        </>: 
-        <ProductList />
+       <>
+       <button type="button" onClick={()=> setSaison("Sommer")}>Sommer</button>
+       <button type="button" onClick={()=> setSaison("Winter")}>Winter</button> 
+       <button type="button" onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
+       <button type="button" onClick={()=> setSaison("alle")}>Alle</button>
+        <ProductList saison={saison} />
+        </>
       }
       
     </main>
