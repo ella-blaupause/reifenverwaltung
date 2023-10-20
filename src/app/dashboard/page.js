@@ -13,7 +13,7 @@ import { useState } from "react";
 
 export default function Dashboard() {
   const { data: session } = useSession(); 
-  const [saison, setSaison]= useState("")
+  const [saison, setSaison]= useState("alle")
   
 
   if(!session) {
@@ -36,20 +36,15 @@ export default function Dashboard() {
       {session.user.role === "admin" &&
        <Link href={"/admin"} className={styles.adminLink}> <FaUserCog /></Link>}
       </div>
-      {!saison ? 
-       <>
-        <button type="button" onClick={()=> setSaison("Sommer")}>Sommer</button>
-        <button type="button" onClick={()=> setSaison("Winter")}>Winter</button> 
-        <button type="button" onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
-       </>: 
-       <>
+  
+      <>
        <button type="button" onClick={()=> setSaison("Sommer")}>Sommer</button>
        <button type="button" onClick={()=> setSaison("Winter")}>Winter</button> 
        <button type="button" onClick={()=> setSaison("Ganzjahr")}>Ganzjahr</button>
        <button type="button" onClick={()=> setSaison("alle")}>Alle</button>
-        <ProductList saison={saison} />
-        </>
-      }
+       <ProductList saison={saison} />
+      </>
+
       
     </main>
   )
