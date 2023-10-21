@@ -58,12 +58,13 @@ export default function EditProductForm({id, Name, Bild, Größe, Saison }) {
         placeholder="Größe"
       />
       
-      <input
-        onChange={(event) => setNewSaison(event.target.value)}
-        value={newSaison}
-        type="text"
-        placeholder="Saison"
-      />
+
+      <select onChange={(event) => setNewSaison(event.target.value)}>
+        <option value={newSaison}>{newSaison}</option>
+        <option value={"Sommer"}>Sommer</option>
+        <option value={"Winter"}>Winter</option>
+        <option value={"Ganzjahr"}>Ganzjahr</option>
+      </select>
       
       <button className={styles.editButton}>
         Aktualisieren
