@@ -45,9 +45,11 @@ export default function EditProduct({ params }) {
 
   return (
     <>
-      <Heading />
+    <Heading />
+    <main>
       <Link href={"/admin"}><BiUndo size={36} /></Link>
       <EditProductForm id={id} Name={Name} Bild={Bild} Größe={Größe} Saison={Saison}  />
+    </main>
     </>
   )
 }

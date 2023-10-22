@@ -29,8 +29,9 @@ export default function Dashboard() {
   
  
   return (
+    <>
+    <Heading />
     <main>
-      <Heading />
       <div className={styles.userAdminDiv}>
       <UserInfo />
       {session.user.role === "admin" &&
@@ -48,5 +49,6 @@ export default function Dashboard() {
        <ProductList saison={saison} />
       </>
     </main>
+    </>
   )
 }

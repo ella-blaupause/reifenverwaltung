@@ -8,9 +8,11 @@ export default function Register() {
   
 
   return (
+    <>
+    <Heading />
     <main>
-      <Heading />
       <RegisterForm/>
     </main>
+    </>
   )
 }
