@@ -5,13 +5,13 @@
 }
 
 .adminLink{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
     font-size: 32px;
     margin: 0 16px 0 16px;
 }
 
 .adminLink:hover{
-    color: darkblue;
+    color: var(--my-pink);
 }
 
 .saisonButtons{
@@ -23,7 +23,7 @@
 }
 
 .saisonButtons button{
-    color: var(--adesso-orange);
+    color: var(--my-pink);
     font-size: 24px;
     background-color: transparent;
     border: none;
@@ -31,11 +31,11 @@
 }
 
 .saisonButtons button:hover{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
 }
 
 .saisonButtons button.active{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
 }
 
 @media(max-width: 480px){

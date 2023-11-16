@@ -8,12 +8,12 @@
     display: flex;
     flex-direction: row;
     align-items: start;
-    border:1px solid var(--adesso-blue);
+    border:1px solid var(--my-blue);
     margin: 8px 0 8px 0;
 }
 
 .productName{
-    background-color: var(--adesso-gray);
+    background-color: var(--my-gray);
     color: white;
     width: max-content;
 }
@@ -33,9 +33,9 @@
 }
 
 .editLink{
-    color: var(--adesso-orange);
+    color: blue;
 }
 
 .editLink:hover{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
 }

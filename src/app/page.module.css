@@ -1,5 +1,5 @@
 .loginLink{
-    background-color: var(--adesso-blue);
+    background-color: var(--my-blue);
     color: white;
     margin: 24px 0 64px 0;
     font-size: 18px;
@@ -10,7 +10,7 @@
 }
 
 .loginLink:hover {
-    background-color: darkblue;
+    background-color: var(--my-pink);
 }
 
 .textContent{

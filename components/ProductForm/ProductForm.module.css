@@ -13,7 +13,7 @@
 }
 
 .addButton{
-    background-color: var(--adesso-orange);
+    background-color: var(--my-pink);
     color: white;
     border: none;
     font-size: 18px;
@@ -23,6 +23,6 @@
 }
 
 .addButton:hover{
-    background-color: #DCC800;
+    background-color: #94222F;
 
 }

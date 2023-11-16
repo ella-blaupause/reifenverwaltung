@@ -3,7 +3,7 @@
     font-size: 24px;
     display: flex;
     gap: 8px;
-    background-color: var(--adesso-orange);
+    background-color: var(--my-pink);
     color: white;
     border: none;
     font-size: 18px;
@@ -14,11 +14,11 @@
 }
 
 .addProductLink:hover{
-    background-color: #DCC800;
+    background-color: #94222F;
 }
 
 .backLink{
-    background-color: var(--adesso-blue);
+    background-color: var(--my-blue);
     color: white;
     margin: 24px 0 64px 0;
     border: none;
@@ -29,5 +29,5 @@
 }
 
 .backLink:hover{
-    background-color: darkblue;
+    background-color: var(--my-pink);
 }
