@@ -1,5 +1,11 @@
 import styles from "./Heading.module.css"
 
 export default function Heading(){
-    return <h1 className={styles.heading}>Reifenverwaltung</h1>
+    return (
+    <header className={styles.heading}>
+        <h1>
+           Reifenverwaltung
+        </h1>
+    </header>
+    )
 }

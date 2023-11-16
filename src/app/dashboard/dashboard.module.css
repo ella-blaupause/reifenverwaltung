@@ -1,6 +1,7 @@
 .userAdminDiv {
     display: flex;
     justify-content: space-between;
+ 
 }
 
 .adminLink{
@@ -16,6 +17,7 @@
 .saisonButtons{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
     margin: 16px;
 }
@@ -34,4 +36,15 @@
 
 .saisonButtons button.active{
     color: var(--adesso-blue);
+}
+
+@media(max-width: 480px){
+    .userAdminDiv{
+        margin-left: 20%;
+        width: 60%;
+    }
+    .saisonButtons{
+        width: 60%;
+        margin-left: 20%;
+    }
 }

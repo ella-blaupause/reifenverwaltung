@@ -9,9 +9,11 @@ export default function Login() {
   const router = useRouter()
 
   return (
+    <>
+    <Heading />
     <main>
-      <Heading />
       <LoginForm />
     </main>
+    </>
   )
 }
