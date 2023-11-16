@@ -11,7 +11,7 @@
 }
 
 .productName{
-    background-color: var(--adesso-gray);
+    background-color: var(--my-gray);
     color: white;
     width: max-content;
 }

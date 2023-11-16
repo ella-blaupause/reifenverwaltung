@@ -1,6 +1,6 @@
 .heading {
     color: white;
-    background-color: var(--adesso-blue);
+    background-color: var(--my-blue);
     width: 100%;
     min-width: 320px;
 }

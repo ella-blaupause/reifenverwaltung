@@ -12,7 +12,7 @@
 
 .loginHeader{
     color: white;
-    background-color: var(--adesso-gray);
+    background-color: var(--my-gray);
     font-size: 36px;
     width: fit-content;
     padding: 4px 8px 4px 8px;
@@ -39,17 +39,17 @@
 .inputDiv input{
     background-color: transparent;
     border: none;
-    border-bottom: 4px solid var(--adesso-blue);
+    border-bottom: 4px solid var(--my-blue);
     outline: none;
     font-size: 18px;
 }
 
 .icon{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
 }
 
 .loginButton{
-    background-color: var(--adesso-orange);
+    background-color: var(--my-pink);
     color: white;
     border: none;
     font-size: 18px;
@@ -59,11 +59,11 @@
 }
 
 .loginButton:hover{
-    background-color: #DCC800;
+    background-color: #94222F;
 }
 
 .formLink{
-    color: var(--adesso-orange);
+    color: var(--my-pink);
     position:absolute;
     right: 0;
     bottom: 10px;
@@ -72,7 +72,7 @@
 }
 
 .formLink:hover{
-    color: var(--adesso-blue);
+    color: var(--my-blue);
 }
 
 .errorDiv{
